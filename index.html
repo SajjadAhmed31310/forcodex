@@ -26,10 +26,16 @@
           <li><a href="#events">الفعاليات</a></li>
           <li><a href="#academy">الأكاديمية</a></li>
           <li><a href="#pricing">الاشتراكات</a></li>
+          <li><a href="#resources">الموارد</a></li>
           <li><a href="#faq">الأسئلة الشائعة</a></li>
           <li><a href="#contact">تواصل معنا</a></li>
         </ul>
-        <button class="nav-button">ابدأ الآن</button>
+        <div class="nav-actions">
+          <button class="nav-button">ابدأ الآن</button>
+          <button class="ghost small" id="theme-toggle" type="button" aria-pressed="false">
+            وضع العرض
+          </button>
+        </div>
       </nav>
       <div class="hero-content">
         <div>
@@ -121,27 +127,59 @@
         <h2>تحديات أسبوعية متجددة</h2>
         <p>تحديات مصنفة حسب المستوى مع نظام توصية تلقائي لتطوير مسارك.</p>
       </div>
+      <div class="challenge-filters">
+        <input type="text" id="challenge-search" placeholder="ابحث في التحديات..." />
+        <select id="challenge-category">
+          <option value="all">كل الفئات</option>
+          <option value="web">Web</option>
+          <option value="forensics">Forensics</option>
+          <option value="reverse">Reverse</option>
+          <option value="crypto">Crypto</option>
+          <option value="pwn">Pwn</option>
+        </select>
+        <select id="challenge-level">
+          <option value="all">كل المستويات</option>
+          <option value="easy">مبتدئ</option>
+          <option value="medium">متوسط</option>
+          <option value="hard">متقدم</option>
+        </select>
+        <span class="challenge-count">0 تحدي</span>
+      </div>
       <div class="challenge-list">
-        <div class="challenge">
+        <div class="challenge" data-category="web" data-level="medium">
           <div>
             <h4>Bank Heist</h4>
             <p>Web · متوسط</p>
           </div>
           <span>400 نقطة</span>
         </div>
-        <div class="challenge">
+        <div class="challenge" data-category="forensics" data-level="hard">
           <div>
             <h4>Signal Ghost</h4>
             <p>Forensics · صعب</p>
           </div>
           <span>650 نقطة</span>
         </div>
-        <div class="challenge">
+        <div class="challenge" data-category="reverse" data-level="medium">
           <div>
             <h4>Binary Maze</h4>
             <p>Reverse · متوسط</p>
           </div>
           <span>520 نقطة</span>
+        </div>
+        <div class="challenge" data-category="crypto" data-level="easy">
+          <div>
+            <h4>Hidden Cipher</h4>
+            <p>Crypto · مبتدئ</p>
+          </div>
+          <span>220 نقطة</span>
+        </div>
+        <div class="challenge" data-category="pwn" data-level="hard">
+          <div>
+            <h4>Kernel Drift</h4>
+            <p>Pwn · متقدم</p>
+          </div>
+          <span>780 نقطة</span>
         </div>
       </div>
       <div class="challenge-metrics">
@@ -190,6 +228,30 @@
           <span>Ghidra</span>
           <span>Metasploit</span>
           <span>Docker Labs</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>حالة المنصة لحظياً</h2>
+        <p>تتبع الأداء والخدمات المتاحة عبر لوحة حالة حية.</p>
+      </div>
+      <div class="status-grid">
+        <div class="status-card">
+          <h3>المختبرات السحابية</h3>
+          <div class="status-bar"><span style="width: 92%"></span></div>
+          <p>جاهزية 92%</p>
+        </div>
+        <div class="status-card">
+          <h3>لوحة التحديات</h3>
+          <div class="status-bar"><span style="width: 98%"></span></div>
+          <p>جاهزية 98%</p>
+        </div>
+        <div class="status-card">
+          <h3>الدعم المباشر</h3>
+          <div class="status-bar"><span style="width: 86%"></span></div>
+          <p>جاهزية 86%</p>
         </div>
       </div>
     </section>
@@ -274,6 +336,31 @@
       </div>
     </section>
 
+    <section class="section highlight">
+      <div class="section-title">
+        <h2>خارطة الطريق</h2>
+        <p>تحديثات ربع سنوية لتطوير المنصة والمجتمع.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>الربع الأول</h3>
+          <p>إطلاق مختبرات السحابة المتقدمة وبوابة الشركات.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>الربع الثاني</h3>
+          <p>إضافة نظام شهادات مؤتمت وتقييمات ذكية.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>الربع الثالث</h3>
+          <p>بطولات إقليمية مع بث مباشر متعدد اللغات.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>الربع الرابع</h3>
+          <p>مركز بيانات محلي وخدمات تدريب خاصة للجامعات.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="pricing" class="section">
       <div class="section-title">
         <h2>خطط الاشتراك</h2>
@@ -323,6 +410,30 @@
         <div>ArabSec</div>
         <div>CloudDefend</div>
         <div>ZeroTrace</div>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="section-title">
+        <h2>مكتبة الموارد</h2>
+        <p>قوالب، أدلة، وملفات مساعدة لتطوير مهارات فريقك.</p>
+      </div>
+      <div class="resources-grid">
+        <article class="resource-card">
+          <h3>دليل البداية السريعة</h3>
+          <p>خطوات تشغيل التحديات والبيئات خلال دقائق.</p>
+          <button class="secondary">تحميل PDF</button>
+        </article>
+        <article class="resource-card">
+          <h3>قالب تقرير ثغرة</h3>
+          <p>نموذج جاهز لتوثيق نقاط الضعف ومخرجات الاستغلال.</p>
+          <button class="secondary">تحميل القالب</button>
+        </article>
+        <article class="resource-card">
+          <h3>دليل الفرق</h3>
+          <p>أفضل الممارسات لإدارة الفريق وتوزيع المهام.</p>
+          <button class="secondary">تحميل الدليل</button>
+        </article>
       </div>
     </section>
 
@@ -416,9 +527,10 @@
         <a href="#">LinkedIn</a>
         <a href="#">Discord</a>
       </div>
-      <p class="copyright">© 2024 جميع الحقوق محفوظة.</p>
+      <p class="copyright">© <span id="year"></span> جميع الحقوق محفوظة.</p>
     </footer>
 
+    <button class="back-to-top" type="button" aria-label="العودة للأعلى">↑</button>
     <script src="script.js"></script>
   </body>
 </html>

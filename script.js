@@ -4,6 +4,14 @@ const menuToggle = document.querySelector(".menu-toggle");
 const contactForm = document.querySelector(".contact-form");
 const countdown = document.querySelector(".countdown-timer");
 const newsletterForm = document.querySelector(".newsletter-form");
+const themeToggle = document.querySelector("#theme-toggle");
+const yearSpan = document.querySelector("#year");
+const backToTop = document.querySelector(".back-to-top");
+const challengeSearch = document.querySelector("#challenge-search");
+const challengeCategory = document.querySelector("#challenge-category");
+const challengeLevel = document.querySelector("#challenge-level");
+const challengeCount = document.querySelector(".challenge-count");
+const challenges = Array.from(document.querySelectorAll(".challenge"));
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -58,6 +66,43 @@ if (newsletterForm) {
   });
 }
 
+const updateChallengeCount = (visibleCount) => {
+  if (challengeCount) {
+    challengeCount.textContent = `${visibleCount} تحدي`;
+  }
+};
+
+const applyChallengeFilters = () => {
+  const searchValue = challengeSearch ? challengeSearch.value.trim().toLowerCase() : "";
+  const categoryValue = challengeCategory ? challengeCategory.value : "all";
+  const levelValue = challengeLevel ? challengeLevel.value : "all";
+  let visible = 0;
+
+  challenges.forEach((challenge) => {
+    const title = challenge.querySelector("h4")?.textContent?.toLowerCase() ?? "";
+    const category = challenge.dataset.category;
+    const level = challenge.dataset.level;
+    const matchesSearch = title.includes(searchValue);
+    const matchesCategory = categoryValue === "all" || category === categoryValue;
+    const matchesLevel = levelValue === "all" || level === levelValue;
+    const isVisible = matchesSearch && matchesCategory && matchesLevel;
+    challenge.style.display = isVisible ? "flex" : "none";
+    if (isVisible) {
+      visible += 1;
+    }
+  });
+
+  updateChallengeCount(visible);
+};
+
+if (challengeSearch || challengeCategory || challengeLevel) {
+  [challengeSearch, challengeCategory, challengeLevel].forEach((input) => {
+    input?.addEventListener("input", applyChallengeFilters);
+    input?.addEventListener("change", applyChallengeFilters);
+  });
+  applyChallengeFilters();
+}
+
 if (countdown) {
   const targetDate = new Date(countdown.dataset.target).getTime();
   const updateCountdown = () => {
@@ -70,4 +115,33 @@ if (countdown) {
   };
   updateCountdown();
   setInterval(updateCountdown, 1000);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
+    if (isLight) {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+    themeToggle.setAttribute("aria-pressed", String(!isLight));
+  });
+}
+
+if (yearSpan) {
+  yearSpan.textContent = String(new Date().getFullYear());
+}
+
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
