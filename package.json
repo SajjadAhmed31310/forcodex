@@ -1,0 +1,9 @@
+{
+  "name": "ctf-lab-site",
+  "version": "1.0.0",
+  "description": "Arabic RTL CTF landing page",
+  "private": true,
+  "scripts": {
+    "start": "python -m http.server 8000"
+  }
+}

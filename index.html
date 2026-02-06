@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة CTF العربية | تحديات أمنية احترافية</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <div class="logo">CTF Lab</div>
+        <button class="menu-toggle" aria-label="فتح القائمة" aria-controls="site-nav" aria-expanded="false">
+          ☰
+        </button>
+        <ul class="nav-links" id="site-nav">
+          <li><a href="#tracks">المسارات</a></li>
+          <li><a href="#challenges">التحديات</a></li>
+          <li><a href="#labs">المختبرات</a></li>
+          <li><a href="#events">الفعاليات</a></li>
+          <li><a href="#academy">الأكاديمية</a></li>
+          <li><a href="#pricing">الاشتراكات</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+        <button class="nav-button">ابدأ الآن</button>
+      </nav>
+      <div class="hero-content">
+        <div>
+          <p class="tag">موسم CTF 2024</p>
+          <h1>منصة متكاملة لبطولات التقاط العلم</h1>
+          <p class="subtitle">
+            تدرب على مهارات الاختراق الأخلاقي عبر سيناريوهات حقيقية، لوحات متابعة لحظية،
+            ومختبرات سحابية مهيأة بالكامل.
+          </p>
+          <div class="hero-actions">
+            <button class="primary">سجّل فريقك</button>
+            <button class="secondary">استكشف المختبرات</button>
+          </div>
+          <div class="quick-search">
+            <input type="text" placeholder="ابحث عن تحدٍ أو مسار..." aria-label="بحث سريع" />
+            <select aria-label="تصفية حسب المستوى">
+              <option>كل المستويات</option>
+              <option>مبتدئ</option>
+              <option>متوسط</option>
+              <option>متقدم</option>
+            </select>
+            <button class="secondary">بحث</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <h3>420+</h3>
+              <p>تحدي نشط</p>
+            </div>
+            <div class="stat">
+              <h3>65</h3>
+              <p>مسار تدريبي</p>
+            </div>
+            <div class="stat">
+              <h3>18</h3>
+              <p>بطولة سنوية</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>لوحة الفرق</h2>
+          <ul>
+            <li><span>Cyber Falcons</span><span>9840</span></li>
+            <li><span>Shadow Root</span><span>9320</span></li>
+            <li><span>Byte Raiders</span><span>9015</span></li>
+            <li><span>Null Hunters</span><span>8890</span></li>
+          </ul>
+          <button class="ghost">عرض لوحة الصدارة</button>
+          <div class="countdown">
+            <p>الحدث القادم خلال</p>
+            <div
+              class="countdown-timer"
+              data-target="2025-12-20T18:00:00"
+              aria-live="polite"
+            >
+              00:00:00
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="tracks" class="section">
+      <div class="section-title">
+        <h2>مسارات تدريبية متخصصة</h2>
+        <p>ابدأ من الأساسيات إلى الاحتراف مع مسارات مصممة لتطوير كل مهارة.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>تحليل الثغرات</h3>
+          <p>تعمق في استغلال الثغرات الحديثة وبناء سلاسل هجومية واقعية.</p>
+        </article>
+        <article class="card">
+          <h3>الهندسة العكسية</h3>
+          <p>فكك البرمجيات الضارة، تعلم قراءة الباينري، وحل الألغاز المعقدة.</p>
+        </article>
+        <article class="card">
+          <h3>أمن الشبكات</h3>
+          <p>محاكاة شبكات المؤسسات، تحليل الحزم، وفهم البنى المعقدة.</p>
+        </article>
+        <article class="card">
+          <h3>تطبيقات الويب</h3>
+          <p>تحديات عملية من OWASP إلى سيناريوهات حقيقية للثغرات.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="challenges" class="section highlight">
+      <div class="section-title">
+        <h2>تحديات أسبوعية متجددة</h2>
+        <p>تحديات مصنفة حسب المستوى مع نظام توصية تلقائي لتطوير مسارك.</p>
+      </div>
+      <div class="challenge-list">
+        <div class="challenge">
+          <div>
+            <h4>Bank Heist</h4>
+            <p>Web · متوسط</p>
+          </div>
+          <span>400 نقطة</span>
+        </div>
+        <div class="challenge">
+          <div>
+            <h4>Signal Ghost</h4>
+            <p>Forensics · صعب</p>
+          </div>
+          <span>650 نقطة</span>
+        </div>
+        <div class="challenge">
+          <div>
+            <h4>Binary Maze</h4>
+            <p>Reverse · متوسط</p>
+          </div>
+          <span>520 نقطة</span>
+        </div>
+      </div>
+      <div class="challenge-metrics">
+        <div>
+          <h3>98%</h3>
+          <p>نسبة حل التحديات المحدثة</p>
+        </div>
+        <div>
+          <h3>24/7</h3>
+          <p>تشغيل المختبرات السحابية</p>
+        </div>
+        <div>
+          <h3>45 دقيقة</h3>
+          <p>متوسط زمن الاستجابة للدعم</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="labs" class="section">
+      <div class="section-title">
+        <h2>مختبرات تفاعلية</h2>
+        <p>بيئات معزولة تعمل فورياً مع أدوات جاهزة وتوثيق كامل لكل خطوة.</p>
+      </div>
+      <div class="labs-grid">
+        <article class="lab-card">
+          <h3>مختبر الشبكات</h3>
+          <p>محاكاة شبكة مؤسسة مع أجهزة وخدمات حقيقية.</p>
+          <span>12 جهازاً · 9 مهام</span>
+        </article>
+        <article class="lab-card">
+          <h3>مختبر الويب</h3>
+          <p>سيناريوهات واقعية لأكثر ثغرات الويب انتشاراً.</p>
+          <span>18 تطبيقاً · 14 مهمة</span>
+        </article>
+        <article class="lab-card">
+          <h3>مختبر التحليل الجنائي</h3>
+          <p>ملفات وصور رقمية لتحليل الأدلة الرقمية.</p>
+          <span>7 حالات · 10 مهام</span>
+        </article>
+      </div>
+      <div class="lab-tools">
+        <h3>أدوات متاحة</h3>
+        <div class="tools-list">
+          <span>Wireshark</span>
+          <span>Burp Suite</span>
+          <span>Ghidra</span>
+          <span>Metasploit</span>
+          <span>Docker Labs</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section">
+      <div class="section-title">
+        <h2>فعاليات وورش عمل مباشرة</h2>
+        <p>انضم إلى جلسات مباشرة مع مدربين وخبراء أمن معلومات.</p>
+      </div>
+      <div class="event">
+        <div>
+          <h3>CTF Bootcamp Live</h3>
+          <p>18 مارس · بث مباشر لمدة 6 ساعات</p>
+        </div>
+        <button class="secondary">احجز مقعدك</button>
+      </div>
+      <div class="event">
+        <div>
+          <h3>هندسة ثغرات الويب المتقدمة</h3>
+          <p>26 مارس · ورشة تطبيقية</p>
+        </div>
+        <button class="secondary">احجز مقعدك</button>
+      </div>
+      <div class="schedule">
+        <h3>جدول البث الأسبوعي</h3>
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <h4>الإثنين</h4>
+            <p>تحليل البرمجيات الخبيثة · 8:00م</p>
+          </div>
+          <div class="schedule-card">
+            <h4>الأربعاء</h4>
+            <p>هجمات الويب الواقعية · 7:00م</p>
+          </div>
+          <div class="schedule-card">
+            <h4>السبت</h4>
+            <p>جلسة تحديات مباشرة · 5:00م</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="academy" class="section dark">
+      <div class="section-title">
+        <h2>أكاديمية CTF</h2>
+        <p>اشتراك شامل يشمل مختبرات خاصة، تقييم مهارات، وخريطة تعلم شخصية.</p>
+      </div>
+      <div class="academy-grid">
+        <div class="academy-card">
+          <h3>مختبرات سحابية</h3>
+          <p>بيئات جاهزة على السحابة مع إعادة ضبط تلقائية وتوثيق كامل.</p>
+        </div>
+        <div class="academy-card">
+          <h3>توجيه احترافي</h3>
+          <p>جلسات إرشادية أسبوعية مع مراجعة كاملة لتقدمك.</p>
+        </div>
+        <div class="academy-card">
+          <h3>شهادات موثقة</h3>
+          <p>احصل على شهادات بعد اجتياز المسارات التقييمية.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>لوحة التحكم الذكية</h2>
+        <p>تتبع تقدم الفريق، تحليل نقاط الضعف، وتوصيات مباشرة للتطوير.</p>
+      </div>
+      <div class="dashboard">
+        <div class="dashboard-card">
+          <h3>مؤشر التقدم</h3>
+          <p>73% مكتمل · 6 مهارات بحاجة لتعزيز</p>
+        </div>
+        <div class="dashboard-card">
+          <h3>تنبيهات فورية</h3>
+          <p>5 تحديات جديدة مناسبة لمستواك الحالي.</p>
+        </div>
+        <div class="dashboard-card">
+          <h3>مخطط الأداء</h3>
+          <p>أفضل أداء في مسار الويب خلال آخر 30 يوماً.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-title">
+        <h2>خطط الاشتراك</h2>
+        <p>اختر الخطة المناسبة لفريقك أو للتعلم الفردي.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>مجانية</h3>
+          <p class="price">0 ر.س</p>
+          <ul>
+            <li>تحديات أساسية محدودة</li>
+            <li>لوحة متابعة عامة</li>
+            <li>دعم المجتمع</li>
+          </ul>
+          <button class="secondary">ابدأ مجاناً</button>
+        </div>
+        <div class="pricing-card featured">
+          <h3>احترافية</h3>
+          <p class="price">120 ر.س</p>
+          <ul>
+            <li>وصول كامل لكل المسارات</li>
+            <li>مختبرات سحابية خاصة</li>
+            <li>تقييم مهارات شهري</li>
+          </ul>
+          <button class="primary">اشترك الآن</button>
+        </div>
+        <div class="pricing-card">
+          <h3>فرق الشركات</h3>
+          <p class="price">تواصل معنا</p>
+          <ul>
+            <li>بيئات مخصصة للفرق</li>
+            <li>لوحة أداء تفصيلية</li>
+            <li>مدير نجاح مخصص</li>
+          </ul>
+          <button class="secondary">طلب عرض</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <div class="section-title">
+        <h2>شركاؤنا</h2>
+        <p>نتعاون مع الجهات الرائدة لدعم مجتمع الأمن السيبراني العربي.</p>
+      </div>
+      <div class="sponsors">
+        <div>SecureGate</div>
+        <div>ArabSec</div>
+        <div>CloudDefend</div>
+        <div>ZeroTrace</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>قصص نجاح المجتمع</h2>
+        <p>تعرف على تجارب الفرق التي ارتقت بمستواها عبر منصتنا.</p>
+      </div>
+      <div class="stories">
+        <article class="story-card">
+          <h3>فريق Falcon</h3>
+          <p>رفعنا ترتيبنا الإقليمي خلال شهرين عبر تحديات الويب المتقدمة.</p>
+          <span>أكتوبر 2024</span>
+        </article>
+        <article class="story-card">
+          <h3>جامعة التقنية</h3>
+          <p>اعتمدنا مسارات الأكاديمية لتأهيل 120 طالباً للبطولات.</p>
+          <span>يناير 2025</span>
+        </article>
+        <article class="story-card">
+          <h3>SecOps Team</h3>
+          <p>قمنا بتحسين مهارات الفريق عبر جلسات الإرشاد الأسبوعية.</p>
+          <span>فبراير 2025</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="section-title">
+        <h2>الأسئلة الشائعة</h2>
+        <p>إجابات سريعة على أكثر الأسئلة شيوعاً لدى المشاركين.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>هل يمكنني المشاركة بدون فريق؟</summary>
+          <p>نعم، يمكنك المشاركة كفرد أو إنشاء فريق في أي وقت.</p>
+        </details>
+        <details>
+          <summary>هل توجد بيئة تدريب آمنة؟</summary>
+          <p>نستخدم مختبرات معزولة وآمنة مع إعادة ضبط تلقائية لكل تحدٍ.</p>
+        </details>
+        <details>
+          <summary>كيف أحصل على الشهادات؟</summary>
+          <p>بعد إكمال المسارات التقييمية، تصدر الشهادة تلقائياً من لوحة التحكم.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <div class="section-title">
+        <h2>انضم إلى النشرة الأمنية</h2>
+        <p>تحديثات أسبوعية حول التحديات الجديدة والأدوات الأمنية.</p>
+      </div>
+      <form class="newsletter-form">
+        <input type="email" placeholder="البريد الإلكتروني" required />
+        <button class="primary" type="submit">اشترك الآن</button>
+      </form>
+    </section>
+
+    <section id="contact" class="section dark">
+      <div class="section-title">
+        <h2>تواصل معنا</h2>
+        <p>أرسل لنا استفسارك وسنعود لك خلال 24 ساعة.</p>
+      </div>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="الاسم الكامل" required />
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+        <select name="topic">
+          <option>الدعم الفني</option>
+          <option>التدريب والورش</option>
+          <option>الشركات والشراكات</option>
+        </select>
+        <textarea name="message" placeholder="اكتب رسالتك هنا..." rows="4" required></textarea>
+        <button class="primary" type="submit">إرسال الرسالة</button>
+        <p class="form-note">لن نشارك بياناتك مع أي طرف ثالث.</p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <h3>CTF Lab</h3>
+        <p>بيئة عربية لصناعة خبراء الأمن السيبراني.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">سياسة الخصوصية</a>
+        <a href="#">الشروط</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">X</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Discord</a>
+      </div>
+      <p class="copyright">© 2024 جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
